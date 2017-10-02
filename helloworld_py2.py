@@ -1,8 +1,7 @@
 print ("What is your name?")
 user = raw_input() ##Collect the user's name.
 ##I prefer this method because I like the spacing on the command line better when using print for the prompt and a blank input
-print("\n Hello, {0} \n".format(user)) ##Greet the user. The .format function tells the print command what goes in between the {}
-## brackets.
+print("\n Hello, {0} \n".format(user)) ##Greet the user. The '.format' tells the print command what goes in between the {} brackets.
 print(" Your pig-latin name is {0}{1}-{2}ay \n".format((user.upper())[1],(user.lower())[2:],(user.lower())[0]))
 ##The above line prints the users name in pig latin.
 
@@ -11,15 +10,15 @@ while True: ##repeat everything below unless it reaches any one of the 'break' l
 	my_name = raw_input()
 	print ("\nSo my name is {0}?".format(my_name))
 	answer = raw_input()
-	answer_lower = str(answer.lower()) ##convert answer input into a string, otherwise if statements below may not work
-	if answer_lower in ('y','yes','yep','mhm') :
+	answer_lower = str(answer.lower()) ##convert answer input into a lower case string, otherwise if statements below may not work
+	if answer_lower in ('y','yes','yep','mhm') : ##if the answer is any one a of a variety of 'yes' answers, then proceed and break the while loop
 		print ("\n I'm {0}. Nice to meet you, {1}! \n".format(my_name,user))
 		break
-	elif answer_lower in ('n','no','nope','nah') :
-		print ("\nOh, ok. Then let's try that again!")
+	elif answer_lower in ('n','no','nope','nah') : ##if the answer is negative, then repeat the loop
+		print ("\nOh, ok. Then let's try that again! \n")
 		continue
 	else:
-		print ("\n Sorry, I didn't quite understand that answer. \n")
+		print ("\n Sorry, I didn't quite understand that answer. \n") ##if the answer is neither, then repeat the loop
 		continue
 
  
